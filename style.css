@@ -10,8 +10,8 @@ body {
 }
 .card {
     flex-grow: 0;
-    width: 363px;
-    height: 400px;
+    width: 300px;
+    height: 410px;
     min-width: 300px;
     background: #fff;
     border-radius: 20px;
@@ -24,14 +24,14 @@ body {
     background-size: cover;
     background-position: center;
     padding: 10px;
-    text-decoration: none; 
+    text-decoration: none; /* Ensure text decoration is removed */
 }
 
 .card:hover {
     transform: translate(0, -10px);
     box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.07);
 }
-/* กำหนด background-image ให้การ์ดตามลำดับที่เป็น :nth-of-type */
+/* กำหนด background-image ให้การ์ดตามลำดับที่เป็น :nth-of-type
 a:nth-of-type(1) .card {
     background-image: url('img/Background (2).png');
 }
@@ -66,7 +66,7 @@ a:nth-of-type(8) .card {
 
 a:nth-of-type(9) .card {
     background-image: url('img/Background (9).png');
-}
+} */
 
 
 .transparent-card {
@@ -413,18 +413,18 @@ p {
     .card-content {
         display: flex;
         overflow-x: auto;
-        scroll-snap-type: x mandatory; 
-        scroll-padding: 0; 
-        gap: 20px; 
+        scroll-snap-type: x mandatory; /* กำหนดให้เลื่อนในแนวนอน */
+        scroll-padding: 0; /* ให้ padding ของ snap ตรงกลางหน้าจอ */
+        gap: 20px; /* เว้นระยะห่างระหว่างการ์ด */
       }
     
       .card {
-        scroll-snap-align: center; 
-        flex: 0 0 auto; 
+        scroll-snap-align: center; /* ให้การ์ดอยู่ตรงกลาง */
+        flex: 0 0 auto; /* ให้การ์ดมีขนาดตามเนื้อหา */
       }
     
       .card-content::-webkit-scrollbar {
-        display: none; 
+        display: none; /* ซ่อน scrollbar ในโหมดมือถือ */
       }
     .slider::after {
         width: 20%;
