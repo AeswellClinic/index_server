@@ -24,48 +24,50 @@ body {
     background-size: cover;
     background-position: center;
     padding: 10px;
+    text-decoration: none; 
 }
 
 .card:hover {
     transform: translate(0, -10px);
     box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.07);
 }
-
-.card:nth-child(1) {
+/* กำหนด background-image ให้การ์ดตามลำดับที่เป็น :nth-of-type */
+a:nth-of-type(1) .card {
     background-image: url('img/Background (2).png');
 }
 
-.card:nth-child(2) {
+a:nth-of-type(2) .card {
     background-image: url('img/Background (3).png');
 }
 
-.card:nth-child(3) {
+a:nth-of-type(3) .card {
     background-image: url('img/Background (4).png');
 }
 
-.card:nth-child(4) {
+a:nth-of-type(4) .card {
     background-image: url('img/Background (5).png');
 }
 
-.card:nth-child(5) {
+a:nth-of-type(5) .card {
     background-image: url('img/Background (6).png');
 }
 
-.card:nth-child(6) {
+a:nth-of-type(6) .card {
     background-image: url('img/Background (7).png');
 }
 
-.card:nth-child(7) {
+a:nth-of-type(7) .card {
     background-image: url('img/Background (8).png');
 }
 
-.card:nth-child(8) {
+a:nth-of-type(8) .card {
     background-image: url('img/Group 57.png');
 }
 
-.card:nth-child(9) {
+a:nth-of-type(9) .card {
     background-image: url('img/Background (9).png');
 }
+
 
 .transparent-card {
     background-color: rgba(255, 255, 255, 0);
@@ -411,18 +413,18 @@ p {
     .card-content {
         display: flex;
         overflow-x: auto;
-        scroll-snap-type: x mandatory; /* กำหนดให้เลื่อนในแนวนอน */
-        scroll-padding: 0; /* ให้ padding ของ snap ตรงกลางหน้าจอ */
-        gap: 20px; /* เว้นระยะห่างระหว่างการ์ด */
+        scroll-snap-type: x mandatory; 
+        scroll-padding: 0; 
+        gap: 20px; 
       }
     
       .card {
-        scroll-snap-align: center; /* ให้การ์ดอยู่ตรงกลาง */
-        flex: 0 0 auto; /* ให้การ์ดมีขนาดตามเนื้อหา */
+        scroll-snap-align: center; 
+        flex: 0 0 auto; 
       }
     
       .card-content::-webkit-scrollbar {
-        display: none; /* ซ่อน scrollbar ในโหมดมือถือ */
+        display: none; 
       }
     .slider::after {
         width: 20%;
